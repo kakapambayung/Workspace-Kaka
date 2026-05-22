@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Kasir Mini</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🛒 Aplikasi Minimarket Mini</h1>
+        <p class="subtitle">Hitung total belanja dengan diskon otomatis</p>
+
+        <div class="form-group">
+            <label for="harga">💰 Harga Barang</label>
+            <input type="number" id="harga" placeholder="Masukkan harga barang">
+        </div>
+
+        <div class="form-group">
+            <label for="jumlah">📦 Jumlah Barang</label>
+            <input type="number" id="jumlah" placeholder="Masukkan jumlah barang">
+        </div>
+
+        <button onclick="hitungBelanja()">Hitung Total</button>
+        <button onclick="resetForm()" class="reset-btn">Reset</button>
+
+        <div class="hasil-box" id="hasilBox">
+            <h3>Hasil Perhitungan</h3>
+            <p id="hasil">🧾 Menunggu perhitungan...</p>
+        </div>
+
+        <p class="footer">@Kaka Anditya Pambayung</p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
