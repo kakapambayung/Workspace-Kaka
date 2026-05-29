@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var tanggal = new Date().getDay();
+    switch (tanggal) {
+        case 0:
+            console.log("MINGGU");
+            break;
+        case 1:
+            console.log("SENIN");
+            break;
+        case 2:
+            console.log("SELASA");
+            break;
+        case 3:
+            console.log("RABU");
+            break;
+        case 4:
+            console.log("KAMIS");
+            break;
+        case 5:
+            console.log("JUMAT");
+            break;
+        case 6:
+            console.log("SABTU");
+            break;
+        default:
+            console.log("TANGGAL TIDAK VALID");
+    }
+
+    //contoh switch case dengan string
+    var warna = "MERAH";
+    switch (warna) {
+        case "MERAH":
+            console.log("WARNA MERAH");
+            break;
+        case "HIJAU":
+            console.log("WARNA HIJAU");
+            break;
+        case "BIRU":
+            console.log("WARNA BIRU");
+            break;
+        default:
+            console.log("WARNA TIDAK VALID");
+    }
+    </script>
+</body>
+</html>
