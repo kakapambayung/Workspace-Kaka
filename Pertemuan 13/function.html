@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Tugas No 2 - Function JavaScript</title>
+</head>
+<body>
+
+    <h2>Perhitungan Nilai Akhir Mahasiswa</h2>
+
+    <label>Nilai Tugas :</label>
+    <input type="number" id="tugas"><br><br>
+
+    <label>Nilai UTS :</label>
+    <input type="number" id="uts"><br><br>
+
+    <label>Nilai UAS :</label>
+    <input type="number" id="uas"><br><br>
+
+    <button onclick="prosesNilai()">Hitung Nilai</button>
+
+    <hr>
+
+    <p id="hasil"></p>
+
+    <script>
+
+        // Function tanpa parameter
+        function tampilJudul() {
+            console.log("Sistem Penilaian Mahasiswa");
+        }
+
+        // Function dengan parameter dan return value
+        function hitungNilaiAkhir(tugas, uts, uas) {
+            return (tugas * 0.30) + (uts * 0.30) + (uas * 0.40);
+        }
+
+        // Function dengan parameter dan return value
+        function tentukanGrade(nilaiAkhir) {
+
+            if (nilaiAkhir >= 85) {
+                return "A";
+            } else if (nilaiAkhir >= 75) {
+                return "B";
+            } else if (nilaiAkhir >= 65) {
+                return "C";
+            } else if (nilaiAkhir >= 50) {
+                return "D";
+            } else {
+                return "E";
+            }
+
+        }
+
+        function prosesNilai() {
+
+            tampilJudul();
+
+            let tugas = parseFloat(document.getElementById("tugas").value);
+            let uts = parseFloat(document.getElementById("uts").value);
+            let uas = parseFloat(document.getElementById("uas").value);
+
+            if (
+                isNaN(tugas) ||
+                isNaN(uts) ||
+                isNaN(uas)
+            ) {
+                document.getElementById("hasil").innerHTML =
+                    "Semua nilai harus diisi!";
+                return;
+            }
+
+            let nilaiAkhir =
+                hitungNilaiAkhir(tugas, uts, uas);
+
+            let grade =
+                tentukanGrade(nilaiAkhir);
+
+            document.getElementById("hasil").innerHTML =
+                `
+                Nilai Akhir : ${nilaiAkhir.toFixed(2)} <br>
+                Grade : ${grade}
+                `;
+        }
+
+    </script>
+
+</body>
+</html>
